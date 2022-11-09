@@ -1,0 +1,30 @@
+.countries{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 5rem;
+    margin-block: 5rem;
+  }
+  .countries li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 80%;
+    max-width: 400px;
+    padding: 2rem 1rem;
+  }
+  .countries img{
+    width: 80%;
+    aspect-ratio: 16/9;
+  }
+  .countries h2{
+    margin-top: 0;
+  }
+  
