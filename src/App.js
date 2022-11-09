@@ -18,6 +18,10 @@ function App() {
   };
 
   useEffect(() => {
+    dispatch(getCountries());
+  }, []);
+
+  useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
       return;
@@ -42,8 +46,8 @@ function App() {
       </Helmet>
       <h1>COUNTRIES</h1>
       <button
-        className={searchInput === "" && "active"}
-        disabled={searchInput === "" && true}
+        className={searchInput === "" ? "active" : ""}
+        disabled={searchInput === "" ? true : false}
         onClick={getAllHandler}
       >
         All Countries
