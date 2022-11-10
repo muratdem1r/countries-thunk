@@ -15,7 +15,7 @@ export const getCountries = () => (dispatch) => {
 export const getCountriesByName = (name) => (dispatch) => {
   dispatch({ type: "GET_COUNTRIES_START" });
   axios
-    .get(`https://restcountries.com/v3.1/name/${name}`)
+    .get(`https://restcountries.com/v3.1/translation/${name}`)
     .then((response) =>
       dispatch({ type: "GET_COUNTRIES_SUCCESS", payload: response.data })
     )

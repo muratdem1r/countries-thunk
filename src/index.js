@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import store from "./store";
 
+import "./language/i18n";
 import "./assets/styles/index.css";
 import App from "./App";
 
