@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import CountriesList from "./components/Countries/CountriesList";
 import "./assets/styles/App.css";
-import ChangeLanguageButton from "./components/ChangeLanguageButton";
+import ChangeLanguageButton from "./components/utils/ChangeLanguageButton";
 
 function App() {
   const { t } = useTranslation();

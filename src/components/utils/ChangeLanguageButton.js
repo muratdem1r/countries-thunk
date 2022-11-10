@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import styles from "../assets/styles/ChangeLanguageButton.module.css";
+import styles from "../../assets/styles/ChangeLanguageButton.module.css";
 
 const languages = {
   en: { nativeName: "English", flag: "https://flagcdn.com/w320/gb.png" },
