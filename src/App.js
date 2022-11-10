@@ -1,6 +1,6 @@
-import "./App.css";
+import "./assets/styles/App.css";
 import { useDispatch } from "react-redux";
-import { getCountries, getCountriesByName } from "./actions";
+import { getCountries, getCountriesByName } from "./store/actions";
 import CountriesList from "./components/Countries/CountriesList";
 import { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
@@ -45,19 +45,21 @@ function App() {
         <meta name="description" content="Countries with redux-thunk" />
       </Helmet>
       <h1>COUNTRIES</h1>
-      <button
-        className={searchInput === "" ? "active" : ""}
-        disabled={searchInput === "" ? true : false}
-        onClick={getAllHandler}
-      >
-        All Countries
-      </button>
-      <input
-        value={searchInput}
-        type="search"
-        placeholder="Search by Name"
-        onChange={searchHandler}
-      />
+      <div className="search-countries">
+        <button
+          className={searchInput === "" ? "active" : ""}
+          disabled={searchInput === "" ? true : false}
+          onClick={getAllHandler}
+        >
+          All Countries
+        </button>
+        <input
+          value={searchInput}
+          type="search"
+          placeholder="Search by Name"
+          onChange={searchHandler}
+        />
+      </div>
       <CountriesList />
     </div>
   );

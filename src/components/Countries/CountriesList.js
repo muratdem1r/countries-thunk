@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import LoadingSpinner from "../ui/LoadingSpinner";
-import styles from "./Countries.module.css";
+import LoadingSpinner from "../utils/LoadingSpinner";
+import styles from "../../assets/styles/Countries.module.css";
 import Country from "./Country";
 
 function CountriesList() {

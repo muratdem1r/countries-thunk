@@ -5,8 +5,21 @@
   
 }
 
-.App button ,
-.App input[type="search"]{
+.search-countries{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px){
+  .search-countries{
+    flex-direction: row;
+  }
+}
+
+.search-countries button ,
+.search-countries input[type="search"]{
   font-size: 1.125rem;
   background-color: #FCFCFD;
   border-radius: 4px;
@@ -19,26 +32,25 @@
   padding-inline: 1rem;
   transition: box-shadow .15s, transform .15s;
 }
-.App input[type="search"]{
+.search-countries input[type="search"]{
   cursor: text;
-  margin-left: 1rem;
 }
 
-.App button:hover,
-.App button:focus,
-.App input[type="search"]:hover {
+.search-countries button:hover,
+.search-countries button:focus,
+.search-countries input[type="search"]:hover {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   outline: none;
 }
 
-.App button.active,
-.App button:active,
-.App input[type="search"]:focus {
+.search-countries button.active,
+.search-countries button:active,
+.search-countries input[type="search"]:focus {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
   outline: none;
 }
-.App button.active{
+.search-countries button.active{
   cursor: auto;
 }
 h1{
