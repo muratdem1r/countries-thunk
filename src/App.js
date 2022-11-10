@@ -1,14 +1,14 @@
-import "./assets/styles/App.css";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { getCountries, getCountriesByName } from "./store/actions";
-import CountriesList from "./components/Countries/CountriesList";
-import { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+import { getCountries, getCountriesByName } from "./store/actions";
+
+import CountriesList from "./components/Countries/CountriesList";
+import "./assets/styles/App.css";
 
 function App() {
   const dispatch = useDispatch();
   const [searchInput, setSearchInput] = useState("");
-  const firstUpdate = useRef(true);
 
   const getAllHandler = () => {
     setSearchInput("");
@@ -18,15 +18,6 @@ function App() {
   };
 
   useEffect(() => {
-    dispatch(getCountries());
-  }, []);
-
-  useEffect(() => {
-    if (firstUpdate.current) {
-      firstUpdate.current = false;
-      return;
-    }
-
     const debounce = setTimeout(() => {
       if (searchInput.length) {
         dispatch(getCountriesByName(searchInput));
