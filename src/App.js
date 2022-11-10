@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Countries with redux-thunk</title>
+        <title>{t("bookmarkTitle")}</title>
         <meta name="description" content="Countries with redux-thunk" />
       </Helmet>
       <nav>
